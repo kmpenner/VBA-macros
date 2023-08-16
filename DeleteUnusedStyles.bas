@@ -3,7 +3,7 @@ Sub DeleteUnusedStyles()
     Dim oRng As Range
     Dim bInUse As Boolean
     For Each oStyle In ActiveDocument.Styles
-        'Skip built-in styles[^1^][1]
+        'Skip built-in styles
         If oStyle.BuiltIn Then GoTo Skip
         'Check if style is applied to any text in any story type
         bInUse = False 'Initialize flag
